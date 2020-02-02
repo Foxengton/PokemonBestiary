@@ -1,0 +1,39 @@
+﻿<Window x:Class="PokemonWPF.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:PokemonWPF"
+		mc:Ignorable="d"
+		Title="MainWindow" Height="600" Width="800">
+	<Grid Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ContentPresenter Name="navMenu" Grid.Column="0">
+            <ContentPresenter.Content>
+                <Border BorderBrush="Black" BorderThickness="0,0,2,0">
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#ffffff" Offset="0" />
+                            <GradientStop Color="#a8e090" Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <StackPanel>
+                        <TextBlock Text="Pokemons List"/>
+                        <TextBlock Text="My List"/>
+                    </StackPanel>
+                </Border>
+            </ContentPresenter.Content>
+        </ContentPresenter>
+           
+        
+        <ContentPresenter Name="placeholder" Grid.Column="1">
+            <ContentPresenter.Content>
+                <local:PokemonsList/>
+            </ContentPresenter.Content>
+        </ContentPresenter>
+	</Grid>
+</Window>
