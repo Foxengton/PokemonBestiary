@@ -139,7 +139,7 @@ namespace PokemonWPF
 		private static ImageSource GetImageSource(string imagePath)
 		{
 			ImageSourceConverter converter = new ImageSourceConverter();
-			return (ImageSource)converter.ConvertFromString($"./PokemonWPF/{imagePath}");
+			return (ImageSource)converter.ConvertFromString($"./{imagePath}");
 		}
 	}
 }
